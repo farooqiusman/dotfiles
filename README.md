@@ -1,3 +1,3 @@
 # dotfiles
 
-#Usman Farooqi dotfiles for Manjaro-Linux
+Usman Farooqi dotfiles for Manjaro-Linux
