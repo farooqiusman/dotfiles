@@ -15,8 +15,3 @@ killall conky
 
 # Starting all lux-hud conky widgets.
 conky -c ~/.config/conky/lux-hud/lux-sysinfo.conf &
-conky -c ~/.config/conky/lux-hud/lux-cpu.conf &
-conky -c ~/.config/conky/lux-hud/lux-memory.conf &
-conky -c ~/.config/conky/lux-hud/lux-disks.conf &
-conky -c ~/.config/conky/lux-hud/lux-network.conf &
-conky -c ~/.config/conky/lux-hud/lux-processes.conf &
