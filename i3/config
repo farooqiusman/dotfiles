@@ -111,17 +111,22 @@ set $ws9 "9"
 set $ws10 "10"
 
 # manging monitor output (extended display)
-#exec --no-startup-id xrandr --output DP-1 --auto --left-of eDP-1
-workspace 1 output DP-1
-workspace 2 output DP-1
-workspace 3 output DP-1
-workspace 4 output DP-1
-workspace 5 output DP-1
-workspace 6 output eDP-1
-workspace 7 output eDP-1
-workspace 8 output eDP-1
-workspace 9 output eDP-1
-workspace 10 output eDP-1
+
+exec --no-startup-id ~/Scripts/display.sh
+
+set $monitor1 DP-1
+set $monitor2 eDP-1
+
+workspace 1 output $monitor1
+workspace 2 output $monitor1
+workspace 3 output $monitor1
+workspace 4 output $monitor1
+workspace 5 output $monitor1
+workspace 6 output $monitor2
+workspace 7 output $monitor2
+workspace 8 output $monitor2
+workspace 9 output $monitor2
+workspace 10 output $monitor2
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -186,14 +191,18 @@ set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
+set $back                #C0986D
+
+
+
 
 # window colors
 #                       border  background  text     indicator             
-client.focused          #4c7899 #db9c27 #ffffff      #db9c27
-client.focused_inactive #333333 #db9c27 #ffffff      #db9c27
-client.unfocused        #333333 #db9c27 #888888      #db9c27
-client.urgent           #2f343a #db9c27 #ffffff      #db9c27
-client.placeholder      #000000 #db9c27 #ffffff      #db9c27
+client.focused          #4c7899 $back #ffffff      $back
+client.focused_inactive #333333 $back #ffffff      $back
+client.unfocused        #333333 $back #888888      $back
+client.urgent           #2f343a $back #ffffff      $back
+client.placeholder      #000000 $back #ffffff      $back
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -216,11 +225,11 @@ client.placeholder      #000000 #db9c27 #ffffff      #db9c27
 ##############                  i3 gaps                     ################
 ############################################################################
 
-#for_windows [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
+#for_windows [class="^.*"] border pixel 6
+gaps inner 10
+gaps outer 4
 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 6
 new_window 1pixel
 
 ############################################################################
@@ -232,11 +241,8 @@ bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
 
 
 # Sreen brightness controls
-#bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-#bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
-
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -259,5 +265,5 @@ exec_always feh --bg-scale /home/usman/Desktop/Wallpapers/night.jpg
 exec_always xinput --set-prop "ELAN1300:00 04F3:3059 Touchpad" "libinput Natural Scrolling Enabled" 1
 exec_always picom --experimental-backends
 exec_always --no-startup-id ~/.config/conky/lux-hud/startall.sh
-exec_always --no-starup-id blueman-applet
+exec_always --no-startup-id i3-msg 'workspace $ws10; exec /usr/bin/minetime'
 ########################################################################################

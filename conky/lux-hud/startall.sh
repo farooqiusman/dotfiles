@@ -14,4 +14,4 @@ sleep 5
 killall conky
 
 # Starting all lux-hud conky widgets.
-conky -c ~/.config/conky/lux-hud/lux-sysinfo.conf &
+conky -c ~/.config/conky/lux-hud/conky.conf &

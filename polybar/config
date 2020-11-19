@@ -15,7 +15,7 @@
 ;   The README contains a lot of information
 ;
 ;==========================================================
-
+;						colors
 
 [colors]
 ;background = ${xrdb:color0:#222}
@@ -24,9 +24,12 @@ background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
+primary = #222
 secondary = #e60053
 alert = #bd2c40
+
+;-----------------------------------------------------------
+;							bar
 
 [bar/example]
 monitor = ${env:MONITOR:}
@@ -35,12 +38,13 @@ height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
+bottom = false
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 2
 line-color = #f00
 
 border-size = 5
@@ -52,34 +56,37 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
+;----------------------------------------------------------------
+;							fonts								
+
 font-0 = "Monospace:pixelsize=13;3"
 font-1 = "Iosevka Nerd Font:pixelsize=13;3"
 font-2 = "Monospace:pixelsize=13;3"
 
-modules-left = bswmp i3 musicplayer
+;----------------------------------------------------------------
+;							modules
+
+modules-left = i3 musicplayer
 modules-center = date
 modules-right = pulseaudio cpu wlan battery temperature
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
 
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+;------------------------------------------------------------------
+;							xwindows
+
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:65:...%
+
+;------------------------------------------------------------------
+;							xkeyboard
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -97,6 +104,9 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
+;------------------------------------------------------------------
+;							filesystem
+
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -107,32 +117,42 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}:  %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/bspwm]
-type = internal/bspwm
+;------------------------------------------------------------------
+;							workspaces
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+format-padding = 1
 
-label-focused = 
-label-focused-background = ${colors.background-alt}
-;label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+icon-default = 
 
+format = <label-state>
+format-background = ${colors.primary}
+label-active = 
 label-occupied = 
-label-occupied-padding = 2
-
 label-urgent = !
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
 label-empty = 
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
 
-; Separator in between workspaces
-; label-separator = |
+label-empty-padding = 1
+label-active-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+
+label-active-background = ${colors.background}
+label-occupied-background = ${colors.foreground}
+label-urgent-background = ${colors.alert}
+label-empty-foreground = ${colors.foreground-alt}
+
+;-------------------------------------------------------------------
+;							i3 windows
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
+pin-windows = false
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
@@ -155,44 +175,23 @@ label-mode-background = ${colors.primary}
 
 icon-default = %%
 
-
-
-; focused = Active workspace on focused monitor
 label-focused = 
-label-focused-background = ${colors.background-alt}
-;label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-; unfocused = Inactive workspace on any monitor
 label-unfocused = 
-label-unfocused-padding = 2
-
-; visible = Active workspace on unfocused monitor
+label-urgent = !
 label-visible = 
-label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
 
-; urgent = Workspace with urgency hint set
-label-urgent = 
-label-urgent-background = ${colors.alert}
+label-focused-padding = 2
+label-unfocused-padding = 2
+label-visible-padding = 2
 label-urgent-padding = 2
 
-; Separator in between workspaces
-; label-separator = |
-########################################################################
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+label-focused-background = ${colors.background}
+label-visible-background = ${self.label-focused-background}
+label-urgent-background = ${colors.alert}
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
 
-label-song-maxlen = 25
-label-song-ellipsis = true
+;-------------------------------------------------------------------
+;								xbacklight 
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -216,7 +215,9 @@ inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
 
-#####################################################
+;--------------------------------------------------------------------
+;								cpu
+
 [module/cpu]
 type = internal/cpu
 interval = 2
@@ -225,7 +226,9 @@ format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #f90000
 label =  %percentage:2%%
 
-################################################################
+;--------------------------------------------------------------------
+;								memory
+
 [module/memory]
 type = internal/memory
 interval = 2
@@ -234,14 +237,15 @@ format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #4bffdc
 label =  %percentage_used%%
 
-#####################################################################
+;--------------------------------------------------------------------
+;								network
+
 [module/wlan]
 type = internal/network
 interface = wlp2s0
 interval = 3.0
 
 ;format-connected = <ramp-signal> <label-connected>
-;format-connected-underline = #9f78e1
 label-connected =  %essid%
 
 format-disconnected =
@@ -273,7 +277,8 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-####################################################################
+;-------------------------------------------------------------------
+;								date
 
 [module/date]
 type = internal/date
@@ -290,7 +295,9 @@ format-prefix-foreground = #0a6cf5
 
 label = %date% %time%
 
-####################################################################
+;-------------------------------------------------------------------
+;								musicplayer
+
 [module/musicplayer]
 type = custom/script
 interval = .08
@@ -301,9 +308,9 @@ format = <label>
 format-foreground = #ffffff
 exec = cd ~/Scripts; python3 ~/Scripts/music.py
 click-left = playerctl play-pause &
-##################################################
 
-
+;-------------------------------------------------------------------
+;								pulseaudio
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -360,12 +367,14 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-#############################################################
+;----------------------------------------------------------------
+;							battery
+
 [module/battery]
 type = internal/battery
 battery = BAT0
 adapter = AC0
-full-at = 59
+full-at = 58
 
 format-charging = <animation-charging> <label-charging>
 label-charging = %percentage%%
@@ -401,7 +410,9 @@ animation-discharging-4 =
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
-##################################################################
+;-----------------------------------------------------------------
+;							temperature
+
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
@@ -420,7 +431,10 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
-################################################################
+
+;-----------------------------------------------------------------
+;							powermenu
+
 [module/powermenu]
 type = custom/menu
 
@@ -450,6 +464,9 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
+;----------------------------------------------------------------
+;							settings
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -458,8 +475,8 @@ screenchange-reload = true
 ;compositing-border = over
 ;pseudo-transparency = false
 
+;----------------------------------------------------------------
+;							windows manager
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-; vim:ft=dosini
