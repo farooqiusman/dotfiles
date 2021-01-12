@@ -42,6 +42,9 @@ bindsym $mod+d exec /home/usman/Scripts/rofi.sh
 #to run desktop apps
 bindsym $mod+Shift+d exec /home/usman/Scripts/rofi_desktop.sh
 
+# to run ranger
+bindsym $mod+t exec xfce4-terminal -e "ranger" 
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -66,10 +69,10 @@ bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left 15 ppt
+bindsym $mod+Shift+Down move down 15 ppt
+bindsym $mod+Shift+Up move up 15 ppt
+bindsym $mod+Shift+Right move right 15 ppt
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -112,6 +115,9 @@ set $ws10 "10"
 
 # manging monitor output (extended display)
 
+bindsym $mod+Shift+o exec --no-startup-id ~/Scripts/display.sh # will set output to both monitors 
+bindsym $mod+Shift+n exec --no-startup-id ~/Scripts/laptop_monitor.sh # will set output to laptop_monitor
+bindsym $mod+Shift+m exec --no-startup-id ~/Scripts/monitor.sh # will set output to external monitor 
 exec --no-startup-id ~/Scripts/display.sh
 
 set $monitor1 DP-1
@@ -167,16 +173,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 15 px or 15 ppt
+        bindsym k resize grow height 15 px or 15 ppt
+        bindsym l resize shrink height 15 px or 15 ppt
+        bindsym semicolon resize grow width 15 px or 15 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 15 px or 15 ppt
+        bindsym Down resize grow height 15 px or 15 ppt
+        bindsym Up resize shrink height 15 px or 15 ppt
+        bindsym Right resize grow width 15 px or 15 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -190,15 +196,16 @@ set $bg-color            #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $urgent-bg-color     #925D73
 set $back                #C0986D
+set $active              #D0D0D0
 
 
 
 
 # window colors
 #                       border  background  text     indicator             
-client.focused          #4c7899 $back #ffffff      $back
+client.focused          #4c7899 $active  #ffffff      $active 
 client.focused_inactive #333333 $back #ffffff      $back
 client.unfocused        #333333 $back #888888      $back
 client.urgent           #2f343a $back #ffffff      $back
@@ -229,7 +236,7 @@ client.placeholder      #000000 $back #ffffff      $back
 gaps inner 10
 gaps outer 4
 
-for_window [class="^.*"] border pixel 6
+for_window [class="^.*"] border pixel 4
 new_window 1pixel
 
 ############################################################################
@@ -241,8 +248,8 @@ bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
 
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl -q s +5% # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl -q s 5%- # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -256,7 +263,6 @@ bindsym XF86AudioPrev exec playerctl previous
 #other bindings 
 # take a screenshot of a whole window and copy it to a clipboard
 bindsym $mod+Shift+s exec flameshot gui -p ~/Pictures/Screenshots/
-
 ########################################################################################
 ##########                             Start up shit                         ###########
 ########################################################################################
@@ -266,4 +272,9 @@ exec_always xinput --set-prop "ELAN1300:00 04F3:3059 Touchpad" "libinput Natural
 exec_always picom --experimental-backends
 exec_always --no-startup-id ~/.config/conky/lux-hud/startall.sh
 exec_always --no-startup-id i3-msg 'workspace $ws10; exec /usr/bin/minetime'
+exec_always --no-startup-id exec /usr/bin/xfce4-notes
+exec --no-startup-id i3-battery-popup
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
+exec --no-startup-id blueman-applet 
 ########################################################################################

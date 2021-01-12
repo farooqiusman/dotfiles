@@ -66,9 +66,9 @@ font-2 = "Monospace:pixelsize=13;3"
 ;----------------------------------------------------------------
 ;							modules
 
-modules-left = i3 musicplayer
+modules-left = i3 musicplayer 
 modules-center = date
-modules-right = pulseaudio cpu wlan battery temperature
+modules-right = pulseaudio cpu wlan battery
 tray-position = right
 tray-padding = 2
 
@@ -83,7 +83,8 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:65:...%
+label = %title%
+label-maxlen = 20
 
 ;------------------------------------------------------------------
 ;							xkeyboard
