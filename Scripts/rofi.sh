@@ -1,9 +1,9 @@
 #!/bin/sh
 
-bg_color=#292C2F
-fg_color=#B18D68
+bg_color=#4E4675
+fg_color=#000000
 border_color=#36301f
 text_color=#f3f4f5
-htext_color=#B18D68
+htext_color=#000000
 
-rofi -show run -lines 3 -eh 2 -width 25 -padding 55 -opacity 30 -bw 5 -color-window "$bg_color, $fg_color, $border_color" -color-normal "$bg_color, $text_color, $bg_color, $bg_color, $htext_color" -font "Sans 18"
+rofi -show run -modi run -lines 8 -eh 1 -width 25 -padding 20 -bw 5 -color-window "$bg_color, $fg_color, $border_color" -color-normal "$bg_color, $text_color, $bg_color, $bg_color, $htext_color" -font "Sans 16"

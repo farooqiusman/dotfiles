@@ -41,9 +41,16 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec /home/usman/Scripts/rofi.sh
 #to run desktop apps
 bindsym $mod+Shift+d exec /home/usman/Scripts/rofi_desktop.sh
-
+# to run power menu
+bindsym $mod+p exec ~/Scripts/power.sh
 # to run ranger
 bindsym $mod+t exec xfce4-terminal -e "ranger" 
+# to run thunar
+bindsym $mod+Shift+t exec thunar
+# to run calculator
+bindsym $mod+c exec ~/Scripts/calc.sh
+# to run window manager
+bindsym $mod+Shift+w exec ~/Scripts/window.sh
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -120,19 +127,19 @@ bindsym $mod+Shift+n exec --no-startup-id ~/Scripts/laptop_monitor.sh # will set
 bindsym $mod+Shift+m exec --no-startup-id ~/Scripts/monitor.sh # will set output to external monitor 
 exec --no-startup-id ~/Scripts/display.sh
 
-set $monitor1 DP-1
-set $monitor2 eDP-1
+#set DP-1 DP-1
+#set eDP-1 eDP-1
 
-workspace 1 output $monitor1
-workspace 2 output $monitor1
-workspace 3 output $monitor1
-workspace 4 output $monitor1
-workspace 5 output $monitor1
-workspace 6 output $monitor2
-workspace 7 output $monitor2
-workspace 8 output $monitor2
-workspace 9 output $monitor2
-workspace 10 output $monitor2
+workspace 1 output DP1
+workspace 2 output DP1
+workspace 3 output DP1
+workspace 4 output DP1
+workspace 5 output DP1
+workspace 6 output eDP1
+workspace 7 output eDP1
+workspace 8 output eDP1
+workspace 9 output eDP1
+workspace 10 output eDP1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -158,6 +165,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+#------------------------------------------------------------------------------------------
+#                               Assigning workspace 
+assign [class = "MineTime"] workspace $ws10
+assign [class = "discord"] workspace $ws9
+assign [class = "lightcord"] workspace $ws9
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -173,10 +186,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 15 px or 15 ppt
-        bindsym k resize grow height 15 px or 15 ppt
-        bindsym l resize shrink height 15 px or 15 ppt
-        bindsym semicolon resize grow width 15 px or 15 ppt
+        bindsym h resize shrink width 15 px or 15 ppt
+        bindsym j resize grow height 15 px or 15 ppt
+        bindsym k resize shrink height 15 px or 15 ppt
+        bindsym l resize grow width 15 px or 15 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 15 px or 15 ppt
@@ -197,7 +210,7 @@ set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #925D73
-set $back                #C0986D
+set $back                #4E4675
 set $active              #D0D0D0
 
 
@@ -251,8 +264,6 @@ bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
 bindsym XF86MonBrightnessUp exec brightnessctl -q s +5% # increase screen brightness
 bindsym XF86MonBrightnessDown exec brightnessctl -q s 5%- # decrease screen brightness
 
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -260,21 +271,26 @@ bindsym XF86AudioStop exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+
 #other bindings 
 # take a screenshot of a whole window and copy it to a clipboard
-bindsym $mod+Shift+s exec flameshot gui -p ~/Pictures/Screenshots/
+bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+f exec firefox # will start firefox 
+bindsym $mod+g exec --no-startup-id glava --desktop
+bindsym $mod+Shift+g exec --no-startup-id killall glava
 ########################################################################################
 ##########                             Start up shit                         ###########
 ########################################################################################
-exec_always --no-startup-id $HOME/Scripts/polystart.sh
-exec_always feh --bg-scale /home/usman/Desktop/Wallpapers/night.jpg
-exec_always xinput --set-prop "ELAN1300:00 04F3:3059 Touchpad" "libinput Natural Scrolling Enabled" 1
-exec_always picom --experimental-backends
-exec_always --no-startup-id ~/.config/conky/lux-hud/startall.sh
-exec_always --no-startup-id i3-msg 'workspace $ws10; exec /usr/bin/minetime'
-exec_always --no-startup-id exec /usr/bin/xfce4-notes
-exec --no-startup-id i3-battery-popup
-exec_always --no-startup-id xset s off
-exec_always --no-startup-id xset -dpms
-exec --no-startup-id blueman-applet 
+exec_always --no-startup-id $HOME/Scripts/polystart.sh # will start polybar 
+exec_always feh --bg-scale /home/usman/Desktop/Wallpapers/nightsky.jpg  # wallpaper 
+exec_always xinput --set-prop "ELAN1300:00 04F3:3059 Touchpad" "libinput Natural Scrolling Enabled" 1 # script to get touchpad working
+exec_always picom --experimental-backends # will start picom 
+exec_always --no-startup-id ~/.config/conky/lux-hud/startall.sh # will start conky 
+#exec_always --no-startup-id exec /usr/bin/minetime # will start up minetime 
+#exec_always --no-startup-id exec /usr/bin/xfce4-notes # will start up notes 
+exec --no-startup-id i3-battery-popup # notification package to warn when battery is critical 
+exec_always --no-startup-id xset s off # will turn off screen saver mode 
+exec_always --no-startup-id xset -dpms # will display screen time-out
+exec --no-startup-id blueman-applet # will auto start blutooth 
+exec --no-startup-id nm-applet # will start wifi widget in tray
 ########################################################################################
