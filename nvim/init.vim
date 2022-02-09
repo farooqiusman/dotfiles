@@ -1,0 +1,1 @@
+/home/usman/.vimrc

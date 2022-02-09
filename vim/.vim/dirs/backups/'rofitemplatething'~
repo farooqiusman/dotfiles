@@ -1,0 +1,11 @@
+
+configuration {
+    modi: "drun,window,run,ssh";
+    width: 30;
+    show-icons: true;
+    icon-theme: "papirus-maia";
+    lines: 12;
+    fake-transparency: true;
+    sidebar-mode: true;
+}
+@import "/usr/share/rofi/themes/Arc-Dark.rasi"

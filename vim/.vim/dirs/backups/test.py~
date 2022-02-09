@@ -1,0 +1,28 @@
+import os
+import sys
+from subprocess import call, getoutput, STDOUT
+
+data = []
+def file(cmd, log_file):
+    with open(log_file, 'a') as f:
+        e_code = call(cmd, shell=True, stdout=f, stderr=STDOUT)
+
+    if e_code != 0:
+        with open(log_file, 'r') as f:
+            for line in f:
+                print(line.strip())
+        print('\nCompile {} failed with non-zero exit code : {} -- (FAILURE)'.format(log_file, e_code))
+        exit(1)
+
+    else: 
+        with open(log_file, 'r') as f:
+            for line in f:
+                print(line.strip())
+        exit(1)
+
+
+def main():
+    file('ls', 'output.txt')
+
+if __name__ == '__main__':
+    main()

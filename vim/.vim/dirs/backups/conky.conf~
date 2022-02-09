@@ -1,0 +1,95 @@
+--[[
+    conky.conf - a conky config showing info.
+    Author: Usman Farooqi
+]]
+
+conky.config = {
+-- Conky settings
+	background = false,
+	update_interval = 1,
+
+	cpu_avg_samples = 12,
+	net_avg_samples = 2,
+
+	double_buffer = true,
+	no_buffers = true,
+
+	text_buffer_size = 2048,
+
+	temperature_unit = 'celsius',
+
+-- Window specifications
+	own_window = true,
+	own_window_class = 'Conky',
+	own_window_type = 'override',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_transparent = false,
+	own_window_argb_visual = true,
+    own_window_argb_value = 0,
+
+	border_inner_margin = 10,
+	border_outer_margin = 0,
+
+	minimum_width = 340, 
+    minimum_height = 5,
+
+	alignment = 'middle_left',
+	gap_x = 30,
+	gap_y = -130,
+
+-- Graphics settings
+	draw_shades = true,
+	draw_outline = false,
+	draw_borders = true,
+	draw_graph_borders = true,
+	border_width = 5,
+	stippled_borders = 0,
+
+-- Text settings
+	use_xft = true,
+	override_utf8_locale = true,
+	font = 'Cutive Mono:size=12',
+    font1 = 'Cutive Mono:size=14',
+	xftalpha = 0.9,
+	uppercase = false,
+
+	default_color = '#584A76',
+	default_shade_color = '000000',
+	default_outline_color = '000000',
+	color1 = '4ECBDC',
+	color2 = 'FFFFFF'
+}
+
+conky.text = [[
+${font1}${color1}SYSTEM $color2${hr}
+${font}${color1}Distro: 
+${font}${color2}${exec distro}
+
+${font}${color1}Kernel:					${alignr}${color2}${kernel}
+${font}${color1}Machine:				${alignr}${color2}${machine}
+${font}${color1}Uptime:					${alignr}${color2}${uptime_short}
+${font}${color1}User:					${alignr}${color2}${exec whoami}
+${font1}${color1}CPU $color2${hr}
+${font}${color1}Frequency: $cpu%			${alignr}${color2} ${freq_g}Ghz
+$color1${cpubar 4}
+${font1}${color1}MEMORY ${color}${hr}
+${font}${color1}RAM: $memperc%   		${alignr}${color2}$mem / $memmax${alignr}
+${color1}$membar
+${font1}${color1}DISKS ${color2}${hr}
+${font}${color1}Root:					$alignr$color2${fs_used /} / ${fs_size /}
+$color1${fs_bar /}
+${font}${color1}Home:					$alignr$color2${fs_used /home} / ${fs_size /home}
+$color1${fs_bar /home}
+${font}${color1}Windows:				$alignr$color2${fs_used /mnt/windows} / ${fs_size /mnt/windows}
+$color1${fs_bar /mnt/windows}
+${font}${color1}Shared:				$alignr$color2${fs_used /mnt/Shared} / ${fs_size /mnt/Shared}
+$color1${fs_bar /mnt/Shared}
+${font}${color1}Hdd:				$alignr$color2${fs_used /mnt/hdd} / ${fs_size /mnt/hdd}
+$color1${fs_bar /mnt/hdd}
+${font1}${color1}NETWORK ${color2}${hr}
+${font}${color1}Network name:			${alignr}${color2}${wireless_essid wlp6s0}
+${font}${color1}Up:						${alignr}${color2}${upspeed wlp6s0} / ${totalup wlp6s0}
+${font}${color1}Down:					${alignr}${color2}${downspeed wlp6s0} / ${totaldown wlp6s0}
+
+
+]]

@@ -8,10 +8,9 @@
 # License: ISC.
 
 # Let the desktop load for a few seconds before running
-sleep 5
 
 # Kill all current conky processes.
 killall conky
-
+sleep 0.3
 # Starting all lux-hud conky widgets.
 conky -c ~/.config/conky/lux-hud/conky.conf &

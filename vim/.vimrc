@@ -28,7 +28,6 @@ Plug 'patstockwell/vim-monokai-tasty'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 " Code and files fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Paint css colors with the real color
 Plug 'lilydjwg/colorizer'
@@ -50,6 +49,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
 Plug 'tfnico/vim-gradle'
 Plug 'vim-scripts/cup.vim'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'kevinhwang91/rnvimr'
 call plug#end()
 set nocompatible
 
@@ -74,8 +75,8 @@ set directory=~/.vim/dirs/tmp     " directory to place swap files in
 set backup                        " make backup files
 set backupdir=~/.vim/dirs/backups " where to put backup files
 set undofile                      " persistent undos - undo after you re-open the file
-set undodir=~/.vim/dirs/undos
-set viminfo+=n~/.vim/dirs/viminfo
+set undodir=~/undos
+" set viminfo+=n~/.vim/dirs/viminfo
 " create needed directories if they don't exist
 if !isdirectory(&backupdir)
     call mkdir(&backupdir, "p")
@@ -100,26 +101,24 @@ set nu
 set fillchars+=vert:\ 
 
 " use 256 colors when possible
-if has('gui_running') || (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256')
-    if !has('gui_running')
-        let &t_Co = 256
-    endif
-    " colorscheme vim-monokai-tasty
-    " colorscheme dogrun
-    " colorscheme gruvbox
-    " colorscheme minimalist
-    " colorscheme edge
-    " colorscheme onehalf
     " colorscheme onedark
-    colorscheme dracula
-else
-    colorscheme delek
-endif
-
+colorscheme dracula
+set termguicolors
 set background=dark
-if (has("termguicolors"))
-    set termguicolors
-endif
+" if has('gui_running') || (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256')
+"     if !has('gui_running')
+"         let &t_Co = 256
+"     endif
+"     " colorscheme vim-monokai-tasty
+"     " colorscheme dogrun
+"     " colorscheme gruvbox
+"     " colorscheme minimalist
+"     " colorscheme edge
+"     " colorscheme onehalf
+" else
+"     colorscheme delek
+" endif
+
 " save as sudo
 ca w!! w !sudo tee "%"
 
@@ -137,7 +136,7 @@ set scrolloff=3
 " Fzf ------------------------------
 
 " file finder mapping
-nmap <leader>f :Files<CR>
+nmap <leader>f :RnvimrToggle<CR>
 " tags (symbols) in current file finder mapping
 nmap <leader>g :BTag<CR>
 " the same<leader> but with the word under the cursor pre filled
@@ -157,7 +156,7 @@ nmap <leader>wF :execute ":Lines " . expand('<cword>')<CR> commands finder mappi
 " nmap <leader>c :Commands<CR>
 
 " nmap ctrl + n will open a file in current directory as a new tab
-nmap <C-n> :tabnew <bar> Files <CR>
+nmap <C-n> :tabnew <bar> RnvimrToggle <CR>
 " CoC ---------------------------------------
 imap <C-j> <Plug>(coc-snippets-expand)
 

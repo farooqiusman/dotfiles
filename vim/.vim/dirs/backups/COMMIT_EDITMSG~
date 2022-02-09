@@ -1,0 +1,59 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	new file:   ../Scripts
+#	deleted:    ../Scripts/Brightness.sh
+#	deleted:    ../Scripts/Start_up.sh
+#	deleted:    ../Scripts/calc.sh
+#	deleted:    ../Scripts/compiler.sh
+#	deleted:    ../Scripts/discord.sh
+#	deleted:    ../Scripts/display.sh
+#	deleted:    ../Scripts/huion.sh
+#	deleted:    ../Scripts/laptop_monitor.sh
+#	deleted:    ../Scripts/monitor.sh
+#	deleted:    ../Scripts/music.py
+#	deleted:    ../Scripts/polystart.sh
+#	deleted:    ../Scripts/power.sh
+#	deleted:    ../Scripts/rofi.sh
+#	deleted:    ../Scripts/rofi_desktop.sh
+#	deleted:    ../Scripts/scroll.txt
+#	deleted:    ../Scripts/test.txt
+#	deleted:    ../Scripts/window.sh
+#	typechange: .bash_profile
+#	typechange: .bashrc
+#
+# Changes not staged for commit:
+#	modified:   ../README.md
+#	modified:   ../conky/lux-hud/LICENSE
+#	modified:   ../conky/lux-hud/README.md
+#	modified:   ../conky/lux-hud/conky.conf
+#	modified:   ../conky/lux-hud/lux-clock.conf
+#	modified:   ../conky/lux-hud/lux-cpu.conf
+#	modified:   ../conky/lux-hud/lux-disks.conf
+#	modified:   ../conky/lux-hud/lux-log.conf
+#	modified:   ../conky/lux-hud/lux-memory.conf
+#	modified:   ../conky/lux-hud/lux-network.conf
+#	modified:   ../conky/lux-hud/lux-processes.conf
+#	modified:   ../conky/lux-hud/lux-sysinfo.conf
+#	modified:   ../conky/lux-hud/screenshot.png
+#	modified:   ../conky/lux-hud/template.conf
+#	modified:   ../dunst/dunstrc
+#	modified:   ../i3/config
+#	modified:   ../picom/picom.conf
+#	modified:   ../polybar/bar2.conf
+#	modified:   ../polybar/config
+#	modified:   ../ranger/colorschemes/__init__.py
+#	modified:   ../ranger/colorschemes/__pycache__/__init__.cpython-39.opt-1.pyc
+#	modified:   ../ranger/colorschemes/__pycache__/zenburn.cpython-39.opt-1.pyc
+#	modified:   ../ranger/colorschemes/zenburn.py
+#	modified:   ../ranger/commands.py
+#	modified:   ../ranger/commands_full.py
+#	modified:   ../ranger/rc.conf
+#	modified:   ../ranger/rifle.conf
+#	typechange: ../vim/.vimrc
+#

@@ -1,0 +1,2 @@
+print(len(str(100)))
+print(2//2)

@@ -1,0 +1,281 @@
+include irvine32.inc
+
+.MODEL SMALL
+
+ .STACK 100H
+
+ .DATA
+    PROMPT_1  DB  \'Enter the Array elements :\',0DH,0AH,\'$\'
+
+    PROMPT_2  DB  \'N = : $\'
+
+    ARRAY   DW  20 DUP(0)
+
+ .CODE
+
+   MAIN PROC
+
+     MOV AX, @DATA
+
+     MOV DS, AX
+
+     MOV BX, 10
+
+     LEA DX, PROMPT_1
+
+     MOV AH, 9
+
+     INT 21H
+
+     LEA SI, ARRAY
+
+     CALL READ_ARRAY
+
+     LEA DX, PROMPT_2
+
+     MOV AH, 9
+
+     INT 21H
+
+     LEA SI, ARRAY
+
+     CALL PRINT_ARRAY
+
+     MOV AH, 4CH
+
+     INT 21H
+
+   MAIN ENDP
+
+
+PUSH AX
+   PUSH CX
+   PUSH DX
+
+   MOV CX, BX
+
+   @READ_ARRAY:
+
+     CALL INDEC
+
+     MOV [SI], AX
+
+     ADD SI, 2
+
+     MOV DL, 0AH
+
+     MOV AH, 2
+
+     INT 21H
+
+   LOOP @READ_ARRAY
+
+   POP DX
+
+   POP CX
+
+LEA SI, ARRAY
+
+     CALL PRINT_ARRAY
+
+     MOV AH, 4CH
+
+     INT 21H
+
+   MAIN ENDP
+
+
+PUSH AX
+   PUSH CX
+   PUSH DX
+
+   MOV CX, BX
+
+   @READ_ARRAY:
+     CALL INDEC
+
+     MOV [SI], AX
+     ADD SI, 2
+
+     MOV DL, 0AH
+     MOV AH, 2
+     INT 21H
+   LOOP @READ_ARRAY
+
+   POP DX
+   POP CX
+   POP AX
+
+   RET
+ READ_ARRAY ENDP
+
+
+
+
+ARRAY   DW  20
+
+ .CODE
+
+   MAIN PROC
+
+     MOV AX, @DATA               
+
+     MOV DS, AX
+
+     MOV BX, 10                   
+
+     LEA DX, PROMPT_1
+
+     MOV AH, 9
+
+     INT 21H
+
+     LEA SI, ARRAY
+
+     CALL PRINT_ARRAY
+
+     LEA SI, ARRAY
+
+     CALL REVERSE_ARRAY
+
+     LEA DX, PROMPT_2
+     MOV AH, 9
+     INT 21H
+
+     LEA SI, ARRAY
+
+     CALL PRINT_ARRAY
+
+     MOV AH, 4CH
+     INT 21H
+   MAIN ENDP
+
+ PUSH AX
+   PUSH CX
+   PUSH DX
+
+   MOV DX, SI
+   MOV CX, BX
+
+   @REPEAT_1:
+     MOV AX, [SI]
+     PUSH AX
+
+     ADD SI, 2
+   LOOP @REPEAT_1
+
+   MOV SI, DX
+   MOV CX, BX
+
+   @REPEAT_2:
+     POP AX
+     MOV [SI], AX
+
+     ADD SI, 2
+   LOOP @REPEAT_2
+
+   POP DX
+ MOV AH, 4CH
+     INT 21H
+   MAIN ENDP
+
+ PUSH AX
+   PUSH CX
+   PUSH DX
+
+   MOV DX, SI
+   MOV CX, BX
+
+   @REPEAT_1:
+     MOV AX, [SI]
+     PUSH AX
+
+     ADD SI, 2
+   LOOP @REPEAT_1
+
+   MOV SI, DX
+   MOV CX, BX
+
+   @REPEAT_2:
+     POP AX
+     MOV [SI], AX
+
+     ADD SI, 2
+   LOOP @REPEAT_2
+
+   POP DX
+   POP CX
+   POP AX
+
+   RET
+ REVERSE_ARRAY ENDP
+
+
+PUSH AX                          
+ 
+   PUSH CX                        
+
+   PUSH DX                        
+
+   MOV CX, BX                     
+
+   @PRINT_ARRAY:                  
+
+     MOV AX, [SI]                 
+
+     CALL OUTDEC                  
+
+     MOV AH, 2                    
+
+     MOV DL, 20H                  
+
+     INT 21H                      
+
+     ADD SI, 2                    
+
+   LOOP @PRINT_ARRAY              
+
+   POP DX                      
+
+   POP CX                         
+
+   POP AX                        
+
+PUSH AX                     
+
+   PUSH CX                      
+
+   PUSH DX                        
+
+   MOV CX, BX                     
+
+   @PRINT_ARRAY:                  
+
+     MOV AX, [SI]                
+
+     CALL OUTDEC                
+
+     MOV AH, 2                   
+
+     MOV DL, 20H                  
+
+     INT 21H 
+                   
+     ADD SI, 2        
+       
+   LOOP @PRINT_ARRAY            
+
+   POP DX                         
+   POP CX                         
+   POP AX                         
+
+   RET                            
+ PRINT_ARRAY ENDP
+
+
+
+
+
+
+
+

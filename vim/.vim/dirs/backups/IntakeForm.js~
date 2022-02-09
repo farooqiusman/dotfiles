@@ -1,0 +1,53 @@
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+
+const IntakeForm = () => {
+    const [client, setClient] = useState("");
+    const [castedBy, setCastedBy] = useState("");
+    const [designation, setDesignation] = useState("7D");
+    const history = useHistory();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const ITform = { client, castedBy, designation };
+
+        fetch("http://localhost:8000/inTakeForms/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(ITform),
+        }).then(() => {
+            history.push("/");
+        });
+    };
+
+    return (
+        <div className="create">
+            <form onSubmit={handleSubmit}>
+                <label>Client:</label>
+                <input
+                    type="text"
+                    required
+                    value={client}
+                    onChange={(e) => setClient(e.target.value)}
+                />
+                <label>Casted By:</label>
+                <textarea
+                    required
+                    value={castedBy}
+                    onChange={(e) => setCastedBy(e.target.value)}
+                ></textarea>
+                <label>Saffa Designation:</label>
+                <select
+                    value={designation}
+                    onChange={(e) => setDesignation(e.target.value)}
+                >
+                    <option value="7D">7 Days</option>
+                    <option value="28D">28 Days</option>
+                </select>
+                <button>Add Form</button>
+            </form>
+        </div>
+    );
+};
+
+export default IntakeForm;

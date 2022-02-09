@@ -1,0 +1,114 @@
+--[[
+    conky.conf - a conky config showing info.
+    Author: Usman Farooqi
+]]
+
+conky.config = {
+-- Conky settings
+	background = false,
+	update_interval = 1,
+
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+
+	double_buffer = true,
+	no_buffers = true,
+
+	text_buffer_size = 2048,
+
+	temperature_unit = 'celsius',
+
+-- Window specifications
+	own_window = true,
+	own_window_class = 'Conky',
+	own_window_type = 'override',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_transparent = true,
+	own_window_argb_visual = true,
+    own_window_argb_value = 0,
+
+	border_inner_margin = 10,
+	border_outer_margin = 0,
+
+	minimum_width = 340, 
+    minimum_height = 5,
+
+	alignment = 'top_right',
+	gap_x = 30,
+	gap_y = 60,
+
+-- Graphics settings
+	draw_shades = true,
+	draw_outline = false,
+	draw_borders = true,
+	draw_graph_borders = true,
+	border_width = 5,
+	stippled_borders = 0,
+
+-- Text settings
+	use_xft = true,
+	override_utf8_locale = true,
+	font = 'Cutive Mono:size=12',
+    font1 = 'Cutive Mono:size=14',
+	font2 = 'Cutive Mono:size=10',
+	xftalpha = 0.9,
+	uppercase = false,
+
+	default_color = '#584A76',
+	default_shade_color = '000000',
+	default_outline_color = '000000',
+	color1 = '4ECBDC',
+	color2 = 'FFFFFF'
+}
+
+conky.text = [[
+${font1}${color1}			Cpu Usage
+${color2}${hr}
+${font}${color1}Core 1:
+${font}${color2}Usage: ${cpu cpu1}%		${alignr}${color2} Frequency: ${freq_g 1}Ghz
+$color1${cpubar cpu1 4}
+${color2}${hr}
+${font}${color1}Core 2:
+${font}${color2}Usage: ${cpu cpu2}%		${alignr}${color2} Frequency: ${freq_g 2}Ghz
+$color1${cpubar cpu2 4}
+${color2}${hr}
+${font}${color1}Core 3:
+${font}${color2}Usage: ${cpu cpu3}%		${alignr}${color2} Frequency: ${freq_g 3}Ghz
+$color1${cpubar cpu3 4}
+${color2}${hr}
+${font}${color1}Core 4:
+${font}${color2}Usage: ${cpu cpu4}%		${alignr}${color2} Frequency: ${freq_g 4}Ghz
+$color1${cpubar cpu4 4}
+${color2}${hr}
+${font}${color1}Core 5:
+${font}${color2}Usage: ${cpu cpu5}%		${alignr}${color2} Frequency: ${freq_g 5}Ghz
+$color1${cpubar cpu5 4}
+${color2}${hr}
+${font}${color1}Core 6:
+${font}${color2}Usage: ${cpu cpu6}%		${alignr}${color2} Frequency: ${freq_g 6}Ghz
+$color1${cpubar cpu6 4}
+${color2}${hr}
+${font}${color1}Core 7:
+${font}${color2}Usage: ${cpu cpu7}%		${alignr}${color2} Frequency: ${freq_g 7}Ghz
+$color1${cpubar cpu7 4}
+${color2}${hr}
+${font}${color1}Core 8:
+${font}${color2}Usage: ${cpu cpu8}%		${alignr}${color2} Frequency: ${freq_g 8}Ghz
+$color1${cpubar cpu8 4}
+${color2}${hr}
+${font}${color1}Core 9:
+${font}${color2}Usage: ${cpu cpu9}%		${alignr}${color2} Frequency: ${freq_g 9}Ghz
+$color1${cpubar cpu9 4}
+${color2}${hr}
+${font}${color1}Core 10:
+${font}${color2}Usage: ${cpu cpu10}%		${alignr}${color2} Frequency: ${freq_g 10}Ghz
+$color1${cpubar cpu10 4}
+${color2}${hr}
+${font}${color1}Core 11:
+${font}${color2}Usage: ${cpu cpu11}%		${alignr}${color2} Frequency: ${freq_g 11}Ghz
+$color1${cpubar cpu11 4}
+${color2}${hr}
+${font}${color1}Core 12:
+${font}${color2}Usage: ${cpu cpu12}%		${alignr}${color2} Frequency: ${freq_g 12}Ghz
+$color1${cpubar cpu12 4}
+]]

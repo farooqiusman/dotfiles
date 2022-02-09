@@ -49,8 +49,6 @@ bindsym $mod+t exec xfce4-terminal -e "ranger"
 bindsym $mod+Shift+t exec thunar
 # to run calculator
 bindsym $mod+c exec ~/Scripts/calc.sh
-# to run window manager
-bindsym $mod+Shift+w exec ~/Scripts/window.sh
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -109,6 +107,7 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+set $ws0 "0"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -122,24 +121,24 @@ set $ws10 "10"
 
 # manging monitor output (extended display)
 
-bindsym $mod+Shift+o exec --no-startup-id ~/Scripts/display.sh # will set output to both monitors 
-bindsym $mod+Shift+n exec --no-startup-id ~/Scripts/laptop_monitor.sh # will set output to laptop_monitor
-bindsym $mod+Shift+m exec --no-startup-id ~/Scripts/monitor.sh # will set output to external monitor 
-exec --no-startup-id ~/Scripts/display.sh
+exec --no-startup-id ~/Scripts/monitor.sh
+
+bindsym $mod+Shift+n exec --no-startup-id ~/Scripts/monitor3.sh
+bindsym $mod+Shift+w exec --no-startup-id ~/Scripts/oneMonitor.sh
 
 #set DP-1 DP-1
 #set eDP-1 eDP-1
-
-workspace 1 output DP1
-workspace 2 output DP1
-workspace 3 output DP1
-workspace 4 output DP1
-workspace 5 output DP1
-workspace 6 output eDP1
-workspace 7 output eDP1
-workspace 8 output eDP1
-workspace 9 output eDP1
-workspace 10 output eDP1
+workspace 0 output HDMI-0
+workspace 1 output DP-0
+workspace 2 output DP-0
+workspace 3 output DP-0
+workspace 4 output DP-0
+workspace 5 output DP-0
+workspace 6 output DP-2
+workspace 7 output DP-2
+workspace 8 output DP-2
+workspace 9 output DP-2
+workspace 10 output DP-2
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -167,9 +166,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 #------------------------------------------------------------------------------------------
 #                               Assigning workspace 
-assign [class = "MineTime"] workspace $ws10
+assign [class = "Morgen"] workspace $ws10
 assign [class = "discord"] workspace $ws9
-assign [class = "lightcord"] workspace $ws9
+assign [class = "noisetorch"] workspace $ws6
+assign [class = "Barrier"] workspace $ws1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -224,23 +224,6 @@ client.unfocused        #333333 $back #888888      $back
 client.urgent           #2f343a $back #ffffff      $back
 client.placeholder      #000000 $back #ffffff      $back
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-        #position top
-        #status_command i3status
-        #status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        #colors {
-                #background $bg-color
-                #separator #757575
-                #                  border             background         text
-                #focused_workspace  $bg-color          $bg-color          $text-color
-                #inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-                #urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-        #}
-#}
-
 ############################################################################
 ##############                  i3 gaps                     ################
 ############################################################################
@@ -260,17 +243,11 @@ bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
 bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
 
 
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec brightnessctl -q s +5% # increase screen brightness
-bindsym XF86MonBrightnessDown exec brightnessctl -q s 5%- # decrease screen brightness
-
-
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioStop exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
 
 #other bindings 
 # take a screenshot of a whole window and copy it to a clipboard
@@ -282,15 +259,14 @@ bindsym $mod+Shift+g exec --no-startup-id killall glava
 ##########                             Start up shit                         ###########
 ########################################################################################
 exec_always --no-startup-id $HOME/Scripts/polystart.sh # will start polybar 
+exec --no-startup-id noisetorch
+#exec --no-startup-id morgen
 exec_always feh --bg-scale /home/usman/Desktop/Wallpapers/nightsky.jpg  # wallpaper 
-exec_always xinput --set-prop "ELAN1300:00 04F3:3059 Touchpad" "libinput Natural Scrolling Enabled" 1 # script to get touchpad working
 exec_always picom --experimental-backends # will start picom 
 exec_always --no-startup-id ~/.config/conky/lux-hud/startall.sh # will start conky 
-#exec_always --no-startup-id exec /usr/bin/minetime # will start up minetime 
-#exec_always --no-startup-id exec /usr/bin/xfce4-notes # will start up notes 
-exec --no-startup-id i3-battery-popup # notification package to warn when battery is critical 
-exec_always --no-startup-id xset s off # will turn off screen saver mode 
-exec_always --no-startup-id xset -dpms # will display screen time-out
 exec --no-startup-id blueman-applet # will auto start blutooth 
 exec --no-startup-id nm-applet # will start wifi widget in tray
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 ########################################################################################

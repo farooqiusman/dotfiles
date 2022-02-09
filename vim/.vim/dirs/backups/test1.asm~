@@ -1,0 +1,27 @@
+TITLE
+; Name: Yosief Berhe
+; Date: September 26, 2021
+; ID: 105-150-901
+; Description: This program calculates a mathematical equation.
+INCLUDE Irvine32.inc
+INCLUDELIB Irvine32.lib
+
+
+INCLUDELIB kernel32.lib
+INCLUDELIB user32.lib
+
+.data
+; data declarations go here
+h db 3
+.code
+main PROC
+; program syntax here
+mov eax, 7h
+mov ebx, 3h
+mov ecx, 2h
+add eax, ebx
+sub eax, ecx
+call DumpRegs ; displays registers in console
+exit
+main ENDP
+END main

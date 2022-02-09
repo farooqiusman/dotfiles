@@ -1,0 +1,44 @@
+TITLE
+
+; Name: Usman Farooqi
+; Date: Feb-07-2021
+; ID: 105219637
+; Description: Comp 2660 LabAssignment5
+
+INCLUDE Irvine32.inc
+INCLUDELIB Irvine32.lib
+
+; please comment these lines if you are running in Visual Studios, they were needed for linux
+INCLUDELIB kernel32.lib
+INCLUDELIB user32.lib
+
+.data
+    data = 10
+    String BYTE data DUP(0), 0 ; setting size of String using dup
+.code
+main PROC
+    mov ecx, 20 ; setting the counter
+
+    outerLoop: 
+        push ecx
+        mov ecx, 10 ; set ecx counter for innter loop
+        mov esi, OFFSET String
+        innerLoop:
+            mov eax, 26
+            call RandomRange ; random range for range from 65-86 which is ASCII for all capital letters
+            add eax, 'A'
+            mov [esi], eax
+            inc esi ; increment esi so previous character is not removed
+        call Crlf  ; new line
+            loop innerLoop
+
+        mov edx, OFFSET String
+        call WriteString
+        
+        pop ecx ; get the outer loop value
+        loop outerLoop
+	exit
+
+main ENDP
+END main
+

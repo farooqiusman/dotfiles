@@ -1,0 +1,31 @@
+
+
+"""
+
+"""
+def checkIPValidity(addressIP):
+	# Write your code here
+	list = addressIP.split('.')
+	isValid = False
+	for i in list:
+		if int(i) > 0 and int(i) < 255:
+			isValid = True			
+		else:
+			return 'INVALID'
+			break
+
+	if isValid == True:
+		return 'VALID'
+
+	return 'INVALID'
+
+def main():
+	#input for addressIP
+	addressIP = str(input())
+	
+	
+	result = checkIPValidity(addressIP)
+	print(result)	
+
+if __name__ == "__main__":
+	main()

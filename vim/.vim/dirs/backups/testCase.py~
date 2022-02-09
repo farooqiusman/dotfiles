@@ -1,0 +1,19 @@
+import json
+
+with open("QUADRA.json", "r+") as f:
+    data = json.load(f)
+
+keyCount = 1
+for testCase in list(data.keys()): # will iterate through the dictionary 
+    if "ctbRcMode" in data[testCase]["Encoder"]:
+        del data[testCase]
+    elif "gopLowdelay" in data[testCase]["Encoder"]:
+        del data[testCase]
+    elif "gopSize" in data[testCase]["Encoder"]:
+        del data[testCase]
+    else:
+        newkey = "Q" + ('%06d' % keyCount)
+        print(newkey)
+        keyCount += 1
+with open ("QUADRA.json", "w") as jsonFile:
+    jsonFile.write(json.dumps(data, sort_keys=True, indent=4)) # will remove the keys and values while keeping the original format

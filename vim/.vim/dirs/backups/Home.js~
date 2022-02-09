@@ -1,0 +1,20 @@
+import IntakeFormList from "./IntakeFormList";
+import useFetch from "./useFetch";
+
+const Home = () => {
+    const {
+        error,
+        isPending,
+        data: inTakeForm,
+    } = useFetch("http://localhost:8000/inTakeForms");
+
+    return (
+        <div className="home">
+            {error && <div>{error}</div>}
+            {isPending && <div>Loading...</div>}
+            {inTakeForm && <IntakeFormList inTake={inTakeForm} />}
+        </div>
+    );
+};
+
+export default Home;

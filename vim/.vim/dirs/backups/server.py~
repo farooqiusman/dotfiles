@@ -1,0 +1,35 @@
+import time
+from socket import *
+server = socket(AF_INET, SOCK_STREAM)
+server.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1) # allows to reuse
+Host = str(INADDR_ANY)
+port = 6969
+server.bind((Host, port))
+server.listen(5)
+time = time.ctime()
+running = True
+while running:
+    print("Waiting for connection.....")
+    conn, addr = server.accept() # connect to client
+    print('[+] connected from (IP, Port):', str(addr))
+    conn.send(bytes("IP, PORT: " + str(addr), "utf-8")) # send over ip and port
+    conn.settimeout(15) # set timeout for server
+    msg = 'init'
+    while len(msg):
+        try:
+            msg = conn.recv(30).decode('utf-8')
+            if msg == 'TIME': # if time command was sent
+                conn.send(bytes(time, 'utf-8'))
+            elif msg == "EXIT": # if exit command was sent
+                print("Closing connection")
+                server.close()
+                running = False
+                break
+            else:
+                conn.send(bytes("Invalid command", 'utf-8')) # invalid command was sent
+        except timeout: # if timeout occurs
+            print("Client timed out")
+            conn.close() # close the connection 
+            break
+    conn.close()
+server.close()

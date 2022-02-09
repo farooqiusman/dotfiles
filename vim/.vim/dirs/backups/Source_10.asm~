@@ -1,0 +1,119 @@
+TITLE
+
+; Name: Thomas Seguin
+; Date:November 29 2021
+; ID: 104825639
+; Description: Fib Sequence
+INCLUDE Irvine32.inc
+INCLUDELIB Irvine32.lib
+
+; please comment these lines if you are running in Visual Studios, they were needed for linux
+INCLUDELIB kernel32.lib
+INCLUDELIB user32.lib.data
+N DWORD ?
+array DWORD 4,5,6,7,8
+prompt BYTE "Enter a size N: " , 0
+prompt1 BYTE "0 Create and array || 1TO16 move array to stack || 2 move array to stack || 3 reverse array || -1 exit " , 0
+promtBad BYTE "Invalid input" ,0
+newLine BYTE 0
+
+
+
+
+.code
+
+ArrayToStack PROC
+l1:
+
+push [edi]
+pop eax
+add edi, TYPE array
+loop l1
+
+mov ebx, edi
+
+
+
+ret
+
+
+ArrayToStack ENDP
+
+
+
+StackToArray PROC
+
+l6:
+add edi, TYPE array
+loop l6
+mov ebx, edi
+
+
+sub ebx, TYPE array
+mov eax, array[ebx]
+call WriteDec
+
+l1:
+
+
+pop eax
+mov array[ebx], eax
+sub ebx, TYPE array
+
+loop l1
+
+
+
+
+ret
+
+StackToArray ENDP
+
+StackReverse PROC
+l1:
+
+
+pop eax
+mov array[edi], eax
+add edi, TYPE array
+
+loop l1
+
+
+ret
+StackReverse ENDP
+
+main PROC
+
+
+mov ecx, LENGTHOF array
+mov edi, OFFSET array
+
+call ArrayToStack
+
+mov ecx, LENGTHOF array
+
+
+call StackToArray
+
+
+
+
+mov ecx, LENGTHOF array
+mov edi, OFFSET array
+call StackReverse
+
+
+
+
+call DumpRegs
+
+      exit
+
+
+
+main ENDP
+
+
+
+END main

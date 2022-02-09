@@ -1,0 +1,102 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main (void){
+    int num ;
+    char grade , word , letter;
+    printf("Please enter the conversion type (N or n for number, C or c for letter): \n");
+    scanf("%c",&word);
+
+    switch (word) {
+        case 'N':
+        case 'n':
+           printf("Please enter the number grade as an integer:\n") ;
+           scanf("%d",&num);
+           
+
+           switch (num){
+               case 1 ... 49:
+                printf("Letter grade of %d is F\n",num);   
+                break;
+      
+              case 50 ... 59:
+                printf("Letter grade of %d is D\n",num); 
+                break;
+
+              case 60 ... 69:
+               printf("Letter grade of %d is C\n",num);   
+                break;
+
+              case 70 ... 72:
+               printf("Letter grade of %d is B-\n",num);   
+                break;
+
+              case 73 ... 76:
+               printf("Letter grade of %d is B\n",num);   
+                break;  
+
+              case 77 ... 79:
+               printf("Letter grade of %d is B+\n",num);   
+                break;  
+
+             case 80 ... 84:
+               printf("Letter grade of %d is A-\n",num);   
+                break;   
+
+             case 85 ... 89:
+               printf("Letter grade of %d is A\n",num);   
+                break;   
+
+             case 90 ... 100:
+               printf("Letter grade of %d is A+\n",num);   
+                break;   
+
+             default :
+               printf("Number grade %d is Invalid \n",num);   
+                  
+           }
+           break;
+        case 'C':
+        case 'c':
+        fflush(stdin);
+           printf("Please  enter the  letter grade  as  a  character:\n");
+           scanf("%c",&letter);
+           switch (letter){
+
+               case 'A':
+               case 'a':
+               printf("Word grade  of %c is  Excellent \n",letter);
+               break;
+
+               case 'B':
+               case 'b':
+               printf("Word grade  of %c is  Good \n",letter);
+               break; 
+
+               case 'C':
+               case 'c':
+               printf("Word grade  of %c is  Fair\n",letter);
+               break;
+
+               case 'D':
+               case 'd':
+               printf("Word grade  of %c is  Pass \n",letter);
+               break;
+
+               case 'F':
+               case 'f':
+               printf("Word grade  of %c is  Failure \n",letter);
+               break;
+
+               default:
+               printf("Letter grade %c is  Invalid\n",letter);
+               return 0;
+
+           }
+           break;
+        default :
+          printf("Goodbye!\n");
+          return 0;   
+    }
+
+}

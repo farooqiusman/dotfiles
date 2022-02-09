@@ -1,0 +1,171 @@
+#include <stdio.h>
+
+    int main(){
+        char letterGrade;
+        char choice;
+
+        int numberGrade;
+
+        while(choice != 't'){
+            printf("Please enter the conversion type (N or n for number, C or c for letter) or t to exit: ");
+            scanf(" %c", &choice);
+            switch (choice){
+            case 'N':
+                printf("Please enter the number grade as an integer: \n");
+                scanf("%d", &numberGrade);
+                    switch(numberGrade){
+                        case 'A+':
+                            if(numberGrade<101 && numberGrade>89){
+                                printf("A+");
+                            }
+                            break;
+                        case 'A':
+                             if(numberGrade<90 && numberGrade>84){
+                                printf("A");
+                            }break;
+                        case 'A-':
+                            if(numberGrade<85 && numberGrade>79){
+                                printf("A");
+                            }
+                            break;
+                        case 'B+':
+                           if(numberGrade<80 && numberGrade>76){
+                                printf("B+");
+                            }
+                            break;
+                        case 'B':
+                            if(numberGrade<77 && numberGrade>72){
+                                printf("B");
+                            }
+                            break;
+                        case 'B-':
+                            if(numberGrade<73 && numberGrade>69){
+                                printf("B-");
+                            }
+                            break;
+                        case 'C':
+                            if(numberGrade<70 && numberGrade>59){
+                                printf("C");
+                            }
+                            break;
+                        case 'D':
+                           if(numberGrade<60 && numberGrade>49){
+                                printf("D");
+                            }
+                            break;
+                        case 'F':
+                           if(numberGrade<50 && numberGrade>0){
+                                printf("F");
+                            }
+                            break;
+                    }
+                    break;
+
+            case 'n':
+                 printf("Please enter the number grade as an integer: \n");
+                scanf("%d", &numberGrade);
+                    switch(numberGrade){
+                        case 'A+':
+                            if(numberGrade<101 && numberGrade>89){
+                                printf("A+");
+                            }
+                            break;
+                        case 'A':
+                             if(numberGrade<90 && numberGrade>84){
+                                printf("A");
+                            }break;
+                        case 'A-':
+                            if(numberGrade<85 && numberGrade>79){
+                                printf("A");
+                            }
+                            break;
+                        case 'B+':
+                           if(numberGrade<80 && numberGrade>76){
+                                printf("B+");
+                            }
+                            break;
+                        case 'B':
+                            if(numberGrade<77 && numberGrade>72){
+                                printf("B");
+                            }
+                            break;
+                        case 'B-':
+                            if(numberGrade<73 && numberGrade>69){
+                                printf("B-");
+                            }
+                            break;
+                        case 'C':
+                            if(numberGrade<70 && numberGrade>59){
+                                printf("C");
+                            }
+                            break;
+                        case 'D':
+                           if(numberGrade<60 && numberGrade>49){
+                                printf("D");
+                            }
+                            break;
+                        case 'F':
+                           if(numberGrade<50 && numberGrade>0){
+                                printf("F");
+                            }
+                            break;
+                    }
+                    break;
+
+
+            case 'C':
+                printf("Please enter the letter grade as a character:\n ");
+                scanf(" %c", &letterGrade);
+                    switch(letterGrade){
+                        case 'A':
+                            printf("Excellent\n");
+                            break;
+                        case 'B':
+                            printf("Good\n");
+                            break;
+                        case 'C':
+                            printf("Fair\n");
+                            break;
+                        case 'D':
+                            printf("Pass\n");
+                            break;
+                        case 'F':
+                            printf("Failure\n");
+                            break;
+                        default:
+                            printf("Invaid\n");
+                            break;
+                    }
+                break;
+            case 'c':
+             printf("Please enter the letter grade as a character:\n ");
+                scanf(" %c", &letterGrade);
+                    switch(letterGrade){
+                        case 'A':
+                            printf("Excellent\n");
+                            break;
+                        case 'B':
+                            printf("Good\n");
+                            break;
+                        case 'C':
+                            printf("Fair\n");
+                            break;
+                        case 'D':
+                            printf("Pass\n");
+                            break;
+                        case 'F':
+                            printf("Failure\n");
+                            break;
+                        default:
+                            printf("Invaid\n");
+                            break;
+                    }
+                break;
+        }
+        }
+
+
+        printf("Goodbye!");
+
+    return 0;
+    }

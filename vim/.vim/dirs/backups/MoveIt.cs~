@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MoveIt : MonoBehaviour {
+	// Start is called before the first frame update
+	private static Vector3 velocity = new Vector3(1, 0, 0);
+	private Vector3 currentVelocity;
+
+	void Start() {
+		currentVelocity = velocity;
+	}
+
+	// Update is called once per frame
+	void Update() {
+		if(transform.position.x >= 3 || transform.position.x <= -3){
+			currentVelocity = currentVelocity * -1; //flip the direction
+		}
+		
+		transform.position += currentVelocity * Time.deltaTime; //move the position
+	}
+	
+}

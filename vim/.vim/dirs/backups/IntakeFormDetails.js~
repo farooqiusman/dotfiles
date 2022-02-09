@@ -1,0 +1,37 @@
+import { useHistory, useParams } from "react-router-dom";
+import useFetch from "./useFetch";
+
+const IntakeFormDetails = () => {
+    const { id } = useParams();
+    const {
+        data: inTakeForm,
+        error,
+        isPending,
+    } = useFetch("http://localhost:8000/inTakeForms/" + id);
+    const history = useHistory();
+
+    const handleClick = () => {
+        fetch("http://localhost:8000/inTakeForms/" + inTakeForm.id, {
+            method: "DELETE",
+        }).then(() => {
+            history.push("/");
+        });
+    };
+
+    return (
+        <div className="inTakeForm-details">
+            {isPending && <div>Loading...</div>}
+            {error && <div>{error}</div>}
+            {inTakeForm && (
+                <article>
+                    <h2>Client: {inTakeForm.client}</h2>
+                    <p>Casted by: {inTakeForm.castedBy}</p>
+                    <div>Saffa Designation: {inTakeForm.designation}</div>
+                    <button onClick={handleClick}>delete</button>
+                </article>
+            )}
+        </div>
+    );
+};
+
+export default IntakeFormDetails;

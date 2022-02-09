@@ -1,0 +1,23 @@
+{
+  "name": "vgdc-bot",
+  "version": "1.0.0",
+  "description": "Video Game Design Club Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farooqiusman/VGDC-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farooqiusman/VGDC-Bot/issues"
+  },
+  "homepage": "https://github.com/farooqiusman/VGDC-Bot#readme",
+  "dependencies": {
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0"
+  }
+}

@@ -1,0 +1,52 @@
+TITLE
+
+; Name: Usman Farooqi
+; Date: Feb-07-2021
+; ID: 105219637
+; Description: Comp 2660 LabAssignment5
+
+INCLUDE Irvine32.inc
+INCLUDELIB Irvine32.lib
+
+; please comment these lines if you are running in Visual Studios, they were needed for linux
+INCLUDELIB kernel32.lib
+INCLUDELIB user32.lib
+
+.data
+poppingTmp DWORD ?
+index DWORD 5
+result DWORD 1
+
+; mfactfunction MACRO index
+; 	.IF index <= 1
+; 		EXITM <1>
+; 	.ELSE
+; 		mfactfunction %(index -1)
+; 	.ENDIF
+; 	pop eax
+; ENDM
+
+
+.code
+main PROC
+	mov ecx, index
+	mov eax, 0
+	call fact
+	mov eax, result
+L1: call WriteDec
+	exit
+
+main ENDP
+fact PROC
+	.IF index <= 1
+		jmp L1
+	.ELSE
+		dec ecx
+		result = index * fact
+		call fact
+	.ENDIF
+L1: ret
+fact ENDP
+END main
+
+

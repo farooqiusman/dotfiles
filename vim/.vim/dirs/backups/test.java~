@@ -1,0 +1,20 @@
+class test{
+    public static void main (String [] args){
+        char custType = 'B';
+        double discountRate;
+        switch (custType){
+            case 'A':
+                discountRate = 0.08;
+                break
+            case 'B':
+                discountRate = 0.06;
+            case 'C':
+                discountRate = 0.04;
+            default:
+                discountRate = 0.0;
+        }
+        System.out.println(discountRate); 
+    }
+
+
+}
