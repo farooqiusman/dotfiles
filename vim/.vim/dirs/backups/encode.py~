@@ -1,8 +1,0 @@
-x = input("Enter a string ")
-out = bin(int.from_bytes(x.encode(), 'big'))
-count = 1
-out2 = ['0']
-for i in range(2, len(out)):
-    out2.append(out[i])
-
-print(out2)

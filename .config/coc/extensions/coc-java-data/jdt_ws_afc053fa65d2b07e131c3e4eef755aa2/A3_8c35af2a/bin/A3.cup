@@ -1,0 +1,86 @@
+import java.io.*;
+
+/* Terminals (tokens returned by the scanner). */
+terminal          PLUS, MINUS, TIMES, DIVIDE, LPAREN, RPAREN, COMMA, NOTEQ, EQ, SEMI, ASSIGN, INT, REAL, MAIN, STRING, Id, BEGIN, END, RETURN, QString, IF, ELSE, WRITE, READ;
+terminal Integer number;
+/* Non terminals */
+non terminal Integer Program, Type, MethodDecl, FormalParams, FormalParam, Block, Statement, LocalVarDecl, AssignStmt, ReturnStmt, IfStmt, WriteStmt, ReadStmt, Expression, MultiplicativeExprList, MultiplicativeExpr, PrimaryExprList, PrimaryExpr, BoolExpression, ActualParams, FormalParamsR, ActualParamsR, StatementList;
+
+/* Precedences */
+precedence left PLUS, MINUS;
+precedence left TIMES, DIVIDE;
+precedence left ELSE;
+/* The grammar */
+
+Program ::= MethodDecl
+	|MethodDecl Program
+	;
+Type ::= INT | REAL| STRING; 
+
+MethodDecl ::= Type MAIN Id LPAREN FormalParams RPAREN Block
+	|Type Id LPAREN FormalParams RPAREN Block
+	;
+
+FormalParams ::= FormalParam FormalParamsR;
+
+FormalParamsR ::= COMMA FormalParam FormalParamsR
+		|
+		;
+
+FormalParam ::= Type Id;
+
+
+Block ::= BEGIN StatementList END;
+
+StatementList ::= Statement
+		| Statement StatementList
+		;
+
+Statement ::= Block
+	|LocalVarDecl
+	|AssignStmt
+	|ReturnStmt
+	|IfStmt
+	|WriteStmt
+	|ReadStmt
+	;
+
+LocalVarDecl ::= Type Id SEMI | Type AssignStmt  ;
+
+AssignStmt  ::= Id ASSIGN Expression SEMI 
+           |  Id ASSIGN QString SEMI
+           ;
+ReturnStmt ::= RETURN Expression SEMI;
+IfStmt    ::= IF LPAREN BoolExpression RPAREN Statement
+            | IF LPAREN BoolExpression RPAREN Statement ELSE Statement
+            ;
+WriteStmt ::= WRITE LPAREN Expression COMMA QString RPAREN SEMI ;
+ReadStmt  ::= READ LPAREN Id COMMA QString RPAREN SEMI;
+
+
+Expression ::= MultiplicativeExpr MultiplicativeExprList;
+
+MultiplicativeExprList ::= PLUS MultiplicativeExpr
+			|MINUS MultiplicativeExpr
+			;
+MultiplicativeExpr ::= PrimaryExpr PrimaryExprList;
+
+PrimaryExprList ::= TIMES PrimaryExpr
+		|DIVIDE PrimaryExpr
+		;
+
+PrimaryExpr ::= number  
+             | Id            
+             | LPAREN Expression RPAREN
+             | Id LPAREN ActualParams RPAREN
+             ;
+BoolExpression ::= Expression EQ Expression 
+                 |Expression NOTEQ Expression  
+                 ; 
+ActualParams ::= Expression ActualParamsR;
+
+ActualParamsR ::= COMMA Expression ActualParamsR
+		|
+		;
+
+

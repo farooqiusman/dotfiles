@@ -1,0 +1,12 @@
+Processing first section -- user code.
+Processing second section -- JLex declarations.
+Processing third section -- lexical rules.
+Creating NFA machine representation.
+NFA comprised of 173 states.
+Working on character classes.::....:::::::::....::::......:.:........:.......:..:...::..:.::..:::::..::.:.::....
+NFA has 36 distinct character classes.
+Creating DFA transition table.
+Working on DFA states..................................................................................
+Minimizing DFA transition table.
+68 states after removal of redundant states.
+Outputting lexical analyzer code.

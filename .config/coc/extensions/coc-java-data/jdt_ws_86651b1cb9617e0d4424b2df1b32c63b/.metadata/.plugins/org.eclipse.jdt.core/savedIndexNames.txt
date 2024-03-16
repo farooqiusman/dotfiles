@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/home/usman/.config/coc/extensions/coc-java-data/jdt_ws_86651b1cb9617e0d4424b2df1b32c63b/.metadata/.plugins/org.eclipse.jdt.core

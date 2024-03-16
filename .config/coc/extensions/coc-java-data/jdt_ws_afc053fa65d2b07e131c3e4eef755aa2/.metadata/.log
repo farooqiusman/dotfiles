@@ -1,0 +1,605 @@
+!SESSION 2022-03-15 12:38:26.584 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_312
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/usman/.config/coc/extensions/coc-java-data/jdt_ws_afc053fa65d2b07e131c3e4eef755aa2
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:27.583
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:27.653
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:27.665
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:27.668
+!MESSAGE Initializing Java Language Server 0.57.0.202006172108
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:27.675
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:27.676
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.provideSemanticTokens, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.project.getSemanticTokensLegend, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:27.684
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:27.696
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:27.975
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.099
+!MESSAGE Try to create an invisible project for the workspace /home/usman/Downloads/A3
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.099
+!MESSAGE Creating the Java project A3_8c35af2a
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.105
+!MESSAGE Finished creating the Java project A3_8c35af2a
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.117
+!MESSAGE Successfully created a workspace invisible project A3_8c35af2a
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.118
+!MESSAGE Workspace initialized in 441ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.185
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.189
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.197
+!MESSAGE >> New configuration: {java={enabled=true, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive, runtimes=[]}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}, offline={enabled=false}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, maven={updateSnapshots=false, downloadSources=false}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, saveActions={organizeImports=false}, project={referencedLibraries=[lib/**/*.jar], resourceFilters=[node_modules, .git]}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={maxResults=0.0, enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], filteredTypes=[java.awt.*, com.sun.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}, selectionRange={enabled=true}, sources={organizeImports={starThreshold=99.0, staticStarThreshold=99.0}}, templates={fileHeader=[], typeComment=[]}, references={includeAccessors=true}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.198
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.738
+!MESSAGE >> Updating classpath for project A3_8c35af2a
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.746
+!MESSAGE Reconciled 0. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.856
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.856
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.858
+!MESSAGE Validated 1. Took 109 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.875
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.896
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.897
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2022-03-15 12:38:28.964
+!MESSAGE Failed to publish diagnostics for file:///home/usman/Downloads/A3/A3.lex.java
+!STACK 1
+Java Model Exception: Java Model Status ['A3.lex' is not a valid Java identifier]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Openable.getBuffer(Openable.java:298)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.publishDiagnostics(WorkspaceDiagnosticsHandler.java:274)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.publishDiagnostics(WorkspaceDiagnosticsHandler.java:218)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer$1.run(JDTLanguageServer.java:273)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 -1 2022-03-15 12:38:28.965
+!MESSAGE 'A3.lex' is not a valid Java identifier
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.975
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:38:28.975
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:39:31.517
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:39:31.534
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:39:31.988
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:39:32.444
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:39:32.444
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:39:32.444
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-15 12:40:06.986
+!MESSAGE >> document/didClose
+!SESSION 2022-03-19 19:49:23.229 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_332
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/usman/.config/coc/extensions/coc-java-data/jdt_ws_afc053fa65d2b07e131c3e4eef755aa2
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-03-19 19:49:23.707
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.310
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.361
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.373
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.376
+!MESSAGE Initializing Java Language Server 0.57.0.202006172108
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.384
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.384
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.provideSemanticTokens, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.project.getSemanticTokensLegend, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.407
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.547
+!MESSAGE Workspace initialized in 150ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.608
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.611
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.617
+!MESSAGE >> New configuration: {java={enabled=true, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive, runtimes=[]}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}, offline={enabled=false}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, maven={updateSnapshots=false, downloadSources=false}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, saveActions={organizeImports=false}, project={referencedLibraries=[lib/**/*.jar], resourceFilters=[node_modules, .git]}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={maxResults=0.0, enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], filteredTypes=[java.awt.*, com.sun.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}, selectionRange={enabled=true}, sources={organizeImports={starThreshold=99.0, staticStarThreshold=99.0}}, templates={fileHeader=[], typeComment=[]}, references={includeAccessors=true}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:24.618
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:25.339
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:25.352
+!MESSAGE >> Updating classpath for project A3_8c35af2a
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 19:49:25.390
+!MESSAGE >> build jobs finished
+!SESSION 2022-03-19 23:51:15.827 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_332
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/usman/.config/coc/extensions/coc-java-data/jdt_ws_afc053fa65d2b07e131c3e4eef755aa2
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-03-19 23:51:16.319
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.004
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.066
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.084
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.087
+!MESSAGE Initializing Java Language Server 0.57.0.202006172108
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.096
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.096
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.provideSemanticTokens, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.project.getSemanticTokensLegend, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.116
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.295
+!MESSAGE Workspace initialized in 198ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.317
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.323
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.335
+!MESSAGE >> New configuration: {java={enabled=true, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive, runtimes=[]}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}, offline={enabled=false}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, maven={updateSnapshots=false, downloadSources=false}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, saveActions={organizeImports=false}, project={referencedLibraries=[lib/**/*.jar], resourceFilters=[node_modules, .git]}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={maxResults=0.0, enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], filteredTypes=[java.awt.*, com.sun.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}, selectionRange={enabled=true}, sources={organizeImports={starThreshold=99.0, staticStarThreshold=99.0}}, templates={fileHeader=[], typeComment=[]}, references={includeAccessors=true}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.337
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:17.993
+!MESSAGE >> Updating classpath for project A3_8c35af2a
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:18.001
+!MESSAGE Reconciled 0. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:18.088
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:18.088
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:18.091
+!MESSAGE Validated 1. Took 80 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:18.110
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:18.150
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:18.151
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2022-03-19 23:51:18.224
+!MESSAGE Failed to publish diagnostics for file:///home/usman/Downloads/A3/A3.lex.java
+!STACK 1
+Java Model Exception: Java Model Status ['A3.lex' is not a valid Java identifier]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Openable.getBuffer(Openable.java:298)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.publishDiagnostics(WorkspaceDiagnosticsHandler.java:274)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.publishDiagnostics(WorkspaceDiagnosticsHandler.java:218)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer$1.run(JDTLanguageServer.java:273)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 -1 2022-03-19 23:51:18.224
+!MESSAGE 'A3.lex' is not a valid Java identifier
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:18.232
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:18.233
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:26.968
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:26.978
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:27.383
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:27.789
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:27.789
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:51:27.790
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2022-03-19 23:51:28.165
+!MESSAGE failed to send diagnostics
+!STACK 1
+Java Model Exception: Java Model Status ['A3.lex' is not a valid Java identifier]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Openable.getBuffer(Openable.java:298)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.visit(WorkspaceDiagnosticsHandler.java:171)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.resourceChanged(WorkspaceDiagnosticsHandler.java:96)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:169)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 -1 2022-03-19 23:51:28.165
+!MESSAGE 'A3.lex' is not a valid Java identifier
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2022-03-19 23:51:29.231
+!MESSAGE failed to send diagnostics
+!STACK 1
+Java Model Exception: Java Model Status ['A3.lex' is not a valid Java identifier]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Openable.getBuffer(Openable.java:298)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.visit(WorkspaceDiagnosticsHandler.java:171)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.resourceChanged(WorkspaceDiagnosticsHandler.java:96)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:169)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 -1 2022-03-19 23:51:29.231
+!MESSAGE 'A3.lex' is not a valid Java identifier
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:52:31.461
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:52:31.469
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:52:31.922
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:52:32.378
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:52:32.378
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:52:32.378
+!MESSAGE Validated 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:55:51.909
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:55:51.919
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:55:52.371
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:55:52.827
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:55:52.827
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-19 23:55:52.827
+!MESSAGE Validated 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:32.455
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:32.463
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:32.916
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:33.372
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:33.372
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:33.372
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:52.810
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:52.819
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:53.271
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:53.726
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:53.726
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:00:53.726
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:06:48.071
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:06:48.080
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:06:48.532
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:06:48.986
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:06:48.986
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:06:48.986
+!MESSAGE Validated 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:10:25.385
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:10:25.394
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:10:25.846
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:10:26.300
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:10:26.300
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:10:26.300
+!MESSAGE Validated 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:12:34.660
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:12:34.669
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:12:35.121
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:12:35.525
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:12:35.525
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:12:35.525
+!MESSAGE Validated 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:01.944
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:01.952
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:02.356
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:02.809
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:02.810
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:02.810
+!MESSAGE Validated 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:42.083
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:42.090
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:42.493
+!MESSAGE Reconciled 0. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:42.947
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:42.947
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:14:42.947
+!MESSAGE Validated 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:07.417
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:07.426
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:07.878
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:08.331
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:08.332
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:08.332
+!MESSAGE Validated 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:35.410
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:35.417
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:35.870
+!MESSAGE Reconciled 0. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:36.275
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:36.275
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:15:36.276
+!MESSAGE Validated 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:17:02.455
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:17:02.464
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:17:02.917
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:17:03.371
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:17:03.371
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:17:03.372
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:18:03.174
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:18:03.183
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:18:03.637
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:18:04.091
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:18:04.091
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:18:04.091
+!MESSAGE Validated 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:19:07.135
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:19:07.150
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:19:07.553
+!MESSAGE Reconciled 0. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:19:08.007
+!MESSAGE begin problem for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:19:08.007
+!MESSAGE 0 problems reported for /A3Symbol.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:19:08.007
+!MESSAGE Validated 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-03-20 00:19:09.467
+!MESSAGE >> document/didClose

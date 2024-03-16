@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/A11.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab1/A11.java</location>
+		</link>
+		<link>
+			<name>src/A12_110043170-1.java</name>
+			<type>1</type>
+			<location>/tmp/mozilla_usman0/A12_110043170-1.java</location>
+		</link>
+		<link>
+			<name>src/A12_110043170-2.java</name>
+			<type>1</type>
+			<location>/tmp/mozilla_usman0/A12_110043170-2.java</location>
+		</link>
+		<link>
+			<name>src/DFA-1.java</name>
+			<type>1</type>
+			<location>//tmp/mozilla_usman0/DFA-1.java</location>
+		</link>
+		<link>
+			<name>src/Main.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Fall 2020/Comp 2540 (Data Structures)/Lab03/src/Main.java</location>
+		</link>
+		<link>
+			<name>src/test.java</name>
+			<type>1</type>
+			<location>/home/usman/Desktop/code/test.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

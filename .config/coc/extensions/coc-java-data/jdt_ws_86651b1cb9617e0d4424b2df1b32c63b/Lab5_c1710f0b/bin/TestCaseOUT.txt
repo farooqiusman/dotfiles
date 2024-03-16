@@ -1,0 +1,11 @@
+Test case 1: illegal, time taken 0.728 seconds
+Test case 2: illegal, time taken 3.624 seconds
+Test case 3: illegal, time taken 1.329 seconds
+Test case 4: illegal, time taken 1.276 seconds
+Test case 5: illegal, time taken 1.381 seconds
+Test case 6: legal, time taken 3.268 seconds
+Test case 7: legal, time taken 1.292 seconds
+Test case 8: legal, time taken 1.366 seconds
+Test case 9: legal, time taken 1.247 seconds
+Test case 10: legal, time taken 5.095 seconds
+Total Time for all cases: 20.606 

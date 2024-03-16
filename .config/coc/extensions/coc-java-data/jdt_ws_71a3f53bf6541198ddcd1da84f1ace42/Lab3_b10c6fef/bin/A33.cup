@@ -1,0 +1,16 @@
+terminal
+PLUS , MINUS , TIMES , DIVIDE , LPAREN , RPAREN ;
+terminal Integer NUMBER ;
+non terminal Integer expr, Program, MethodDecl, Type, Formalparams ;
+precedence left PLUS , MINUS ;
+precedence left TIMES , DIVIDE ;
+
+
+//Program ::= MethodDecl MethodDecl* one **OR** more methodDecl
+Program ::= MethodDecl
+         | MethodDecl Program
+         ;
+
+
+/*
+INT F1()

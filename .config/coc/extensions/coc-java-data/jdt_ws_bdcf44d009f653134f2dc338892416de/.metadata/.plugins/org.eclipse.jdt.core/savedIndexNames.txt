@@ -1,0 +1,11 @@
+INDEX VERSION 1.131+/home/usman/.config/coc/extensions/coc-java-data/jdt_ws_bdcf44d009f653134f2dc338892416de/.metadata/.plugins/org.eclipse.jdt.core
+2553708798.index
+751323252.index
+3842426239.index
+198079544.index
+296872936.index
+1356184402.index
+3156646125.index
+4094966283.index
+2496931087.index
+1403178489.index

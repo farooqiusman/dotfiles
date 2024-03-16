@@ -1,0 +1,103 @@
+import java.io.*;
+
+/* Terminals (tokens returned by the scanner). */
+terminal          PLUS, MINUS, TIMES, DIVIDE, LPAREN, RPAREN, STRING, INT, REAL, BEGIN, END, IF, ELSE, READ, WRITE, RETURN, MAIN, EQUALTO, NOTEQUALTO, COMMA, SEMICOLON, EQUALS, IDENTIFIER, NUMBER, QUOTE;
+
+/* Non terminals */
+non terminal Integer    expr, Program, MethodDecl, ExtraMethodDecl, Type, Block, Statement, ExtraStatements, FormalParams, FormalParam, ExtraFormalParam, LocalVarDecl, AssignStmt, ReturnStmt, IfStmt, WriteStmt, ReadStmt, Expression, MultiplicativeExpr, ExtraMultiplicativeExpr, PrimaryExpr, ExtraPrimaryExpr, BoolExpression, ActualParams, ExtraActualParams, PlusMinus, MultDiv;
+
+/* Precedences */
+
+precedence left ELSE;
+
+/* The grammar */
+
+Program ::= ExtraMethodDecl:ret {: RESULT = ret; :};
+
+ExtraMethodDecl ::= MethodDecl {: RESULT = 1; :}
+        | MethodDecl ExtraMethodDecl:x {: RESULT = x + 1; :} 
+        ;
+
+MethodDecl ::= Type MAIN IDENTIFIER LPAREN FormalParams RPAREN Block;
+
+FormalParams ::= FormalParam ExtraFormalParam | ;
+
+ExtraFormalParam ::= COMMA FormalParam ExtraFormalParam;
+
+FormalParam ::= Type IDENTIFIER;
+
+Block ::= BEGIN ExtraStatements END;
+
+ExtraStatements ::= Statement 
+        | Statement ExtraStatements
+        ;
+
+Statement ::= Block
+        | LocalVarDecl
+        | AssignStmt
+        | ReturnStmt
+        | IfStmt
+        | WriteStmt
+        | ReadStmt
+        ;
+
+LocalVarDecl ::= Type IDENTIFIER SEMICOLON
+        | Type AssignStmt
+        ;
+
+AssignStmt ::= IDENTIFIER EQUALS Expression SEMICOLON
+        | IDENTIFIER EQUALS QUOTE SEMICOLON
+        ;
+
+ReturnStmt ::= RETURN Expression SEMICOLON;
+
+IfStmt ::= IF LPAREN BoolExpression RPAREN Statement
+        | IF LPAREN BoolExpression RPAREN Statement ELSE Statement
+        ;
+WriteStmt ::= WRITE LPAREN Expression COMMA QUOTE RPAREN SEMICOLON;
+
+ReadStmt ::= READ LPAREN IDENTIFIER COMMA QUOTE RPAREN SEMICOLON;
+
+Expression ::= MultiplicativeExpr expr
+        | 
+        ;
+
+expr ::= PLUS MultiplicativeExpr expr
+        | MINUS MultiplicativeExpr expr
+        | 
+        ;
+
+ExtraMultiplicativeExpr ::= MultiplicativeExpr
+        | MultiplicativeExpr ExtraMultiplicativeExpr
+        ;
+
+MultiplicativeExpr ::= PrimaryExpr ExtraPrimaryExpr 
+        ;
+
+ExtraPrimaryExpr ::= TIMES PrimaryExpr ExtraPrimaryExpr
+        | DIVIDE PrimaryExpr ExtraPrimaryExpr
+        | 
+        ;
+
+
+PrimaryExpr ::= NUMBER 
+        | IDENTIFIER
+        | LPAREN Expression RPAREN
+        | IDENTIFIER LPAREN ActualParams RPAREN
+        ;
+
+BoolExpression ::= Expression EQUALTO Expression
+        | Expression NOTEQUALTO Expression
+        ;
+
+ExtraActualParams ::= COMMA Expression ExtraActualParams
+        | 
+        ;
+ActualParams ::= Expression ExtraActualParams
+        | 
+        ;
+
+PlusMinus ::= PLUS | MINUS;
+MultDiv ::= TIMES | DIVIDE;
+
+Type ::= INT|REAL|STRING;

@@ -1,0 +1,7 @@
+/** COMPILATION ERROR. MISSING VARIABLE DEFINITION **/
+ INT MAIN F2()
+ BEGIN  
+    X := 5;
+    Y := 3a
+    Z := X*X - Y*Y;
+  END

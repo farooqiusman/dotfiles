@@ -1,0 +1,7 @@
+/**INCORRECT READ STATEMENT **/
+ INT MAIN F6() 
+  BEGIN 
+    INT X;
+    READ(X+5, "A41.INPUT");
+    WRITE (33, "XKOUTPUT"); 
+  END

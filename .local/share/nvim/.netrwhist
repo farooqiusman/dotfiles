@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/usman/Desktop/Discord'
+let g:netrw_dirhist_9='/home/usman/Documents/Github/University/Winter 2023/Comp-3400/Assignment6'
+let g:netrw_dirhist_8='/home/usman/assignment'
+let g:netrw_dirhist_7='/home/usman/Documents/Github/geeksquad-interactiondata/.git'
+let g:netrw_dirhist_6='/home/usman/.config/picom'
+let g:netrw_dirhist_5='/home/usman/Documents/Github/video-transcoder/.git'
+let g:netrw_dirhist_4='/home/usman/.config/conky/lux-hud'
+let g:netrw_dirhist_3='/home/usman/.config/polybar.old'
+let g:netrw_dirhist_2='/home/usman/.config'
+let g:netrw_dirhist_1='/var/log/audit'

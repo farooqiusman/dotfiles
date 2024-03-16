@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/A11.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab1/A11.java</location>
+		</link>
+		<link>
+			<name>src/A12.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab1/A12.java</location>
+		</link>
+		<link>
+			<name>src/A2.lex.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab2/A2.lex.java</location>
+		</link>
+		<link>
+			<name>src/A3Symbol.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab3/A3Symbol.java</location>
+		</link>
+		<link>
+			<name>src/A4.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab4/A4.java</location>
+		</link>
+		<link>
+			<name>src/A4User.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab4/A4User.java</location>
+		</link>
+		<link>
+			<name>src/A5.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab5/A5.java</location>
+		</link>
+		<link>
+			<name>src/A5Scanner.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab5/A5Scanner.java</location>
+		</link>
+		<link>
+			<name>src/A5Sym.java</name>
+			<type>1</type>
+			<location>//home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab5/A5Sym.java</location>
+		</link>
+		<link>
+			<name>src/DFA.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab2/DFA.java</location>
+		</link>
+		<link>
+			<name>src/Simulator.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab2/Simulator.java</location>
+		</link>
+		<link>
+			<name>src/WordCountLinkedList254.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Fall 2020/Comp 2540 (Data Structures)/Lab01/src/WordCountLinkedList254.java</location>
+		</link>
+		<link>
+			<name>src/ming.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab2/ming.java</location>
+		</link>
+		<link>
+			<name>src/ming.lex.java</name>
+			<type>1</type>
+			<location>/home/usman/Documents/Github/University/Winter 2021/Comp 2140/Labs/Lab2/ming.lex.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

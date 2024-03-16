@@ -1,7 +1,0 @@
-import os
-deets = input("enter the deets :sus:")
-cmd = "echo " + deets + " | lolcat"
-
-for i in range(100):
-    os.system(cmd)
-
